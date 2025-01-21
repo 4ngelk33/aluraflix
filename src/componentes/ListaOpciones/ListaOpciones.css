@@ -1,0 +1,26 @@
+.lista-opciones {
+  margin-bottom: 15px;
+}
+
+.lista-opciones label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: white;
+  text-align: left; 
+}
+
+.lista-opciones select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #257be5;
+  background-color: transparent; 
+  color: white; 
+  font-size: 16px;
+}
+
+.lista-opciones select option {
+  background-color: #000; 
+  color: white; 
+}
