@@ -3,17 +3,17 @@ import "./Formulario.css";
 import BotonBlanco from "../BotonBlanco/BotonBlanco";
 import FormularioVideo from "../FormularioVideo/FormularioVideo";
 import ModalVideo from "../ModalVideo/ModalVideo";
-import { FaEdit, FaTrashAlt } from "react-icons/fa"; 
+import { FaEdit, FaTrashAlt } from "react-icons/fa";
 
 function Formulario() {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [tipoFormulario, setTipoFormulario] = useState("crear");
-  const [videoAEditar, setVideoAEditar] = useState(null); 
-  const [categorias, setCategorias] = useState([]); 
+  const [videoAEditar, setVideoAEditar] = useState(null);
+  const [categorias, setCategorias] = useState([]);
   const [videos, setVideos] = useState([]);
   const [coloresCategorias, setColoresCategorias] = useState({});
-  const [modalVisible, setModalVisible] = useState(false); 
-  const [videoSeleccionado, setVideoSeleccionado] = useState(null); 
+  const [modalVisible, setModalVisible] = useState(false);
+  const [videoSeleccionado, setVideoSeleccionado] = useState(null);
 
   const generarColorAleatorio = () =>
     `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -57,13 +57,13 @@ function Formulario() {
   return (
     <header className="header">
       <div className="navbar">
-        <img src="/img/LogoMain.png" alt="Logo" className="logo" />
+        <img src={`${process.env.PUBLIC_URL}/img/LogoMain.png`} alt="Logo" className="logo" />
         <div className="menu">
           <BotonBlanco texto="Nuevo Video" onClick={() => setMostrarFormulario(true)} />
         </div>
       </div>
 
-      <img src="/img/BannerMain.png" alt="BannerMain" className="banner" />
+      <img src={`${process.env.PUBLIC_URL}/img/BannerMain.png`} alt="BannerMain" className="banner" />
 
       {mostrarFormulario && (
         <FormularioVideo
@@ -103,7 +103,7 @@ function Formulario() {
                         borderColor: colorCategoria,
                         boxShadow: `0 0 15px 2px ${colorCategoria}`,
                       }}
-                      onClick={() => abrirModal(video)} 
+                      onClick={() => abrirModal(video)}
                     >
                       <img
                         src={video.imagen || "/img/LogoMain.png"}
@@ -144,7 +144,7 @@ function Formulario() {
       </div>
 
       <div className="footer">
-        <img src="/img/LogoMain.png" alt="Logo" className="logo" />
+        <img src={`${process.env.PUBLIC_URL}/img/LogoMain.png`} alt="Logo" className="logo" />
         <p className="titulo-footer">Desarrollado por Angel Rios © 2025</p>
       </div>
 
