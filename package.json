@@ -2,7 +2,7 @@
   "name": "aluraflix",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://4ngelk33.github.io/aluraflix",
+  "homepage": "https://4ngelk33.github.io/aluraflix/build",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
